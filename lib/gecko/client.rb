@@ -32,6 +32,7 @@ module Gecko
     record :Image
     record :PurchaseOrder
     record :PurchaseOrderLineItem
+    record :Procurement
     record :TaxType
     record :PaymentMethod
     record :PaymentTerm
