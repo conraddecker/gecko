@@ -281,7 +281,7 @@ module Gecko
         end
       end
 
-      # Deletes a record by id.
+      # Destroy a record by id.
       #
       # @example
       #   client.Product.delete(12)
@@ -296,7 +296,7 @@ module Gecko
       #      #could not delete
       #   end
       # @api public
-      def delete(record)
+      def destroy(record)
         response = request(:delete, plural_path + "/" + record.id.to_s)
         handle_response(record, response)
       end
