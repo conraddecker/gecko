@@ -281,6 +281,26 @@ module Gecko
         end
       end
 
+      # Deletes a record by id.
+      #
+      # @example
+      #   client.Product.delete(12)
+      #
+      # @raise [OAuth2::Error] if record was not found
+      # @return [OAuth2::Response] if record was found and deleted
+      #
+      # @example
+      #   if client.Product.delete(12)
+      #      #product deleted
+      #   else
+      #      #could not delete
+      #   end
+      # @api public
+      def delete(record)
+        response = request(:delete, plural_path + "/" + record.id.to_s)
+        handle_response(record, response)
+      end
+
       # Instantiates a record from it's JSON representation and registers
       # it into the identity map
       #
