@@ -296,8 +296,8 @@ module Gecko
       #      #could not delete
       #   end
       # @api public
-      def destroy(record)
-        response = request(:delete, plural_path + "/" + record.id.to_s)
+      def delete(id)
+        response = request(:delete, plural_path + "/" + id.to_s)
         handle_response(record, response)
       end
 
