@@ -297,8 +297,7 @@ module Gecko
       #   end
       # @api public
       def delete(id)
-        response = request(:delete, plural_path + "/" + id.to_s)
-        handle_response(record, response)
+        request(:delete, plural_path + "/" + id.to_s)
       end
 
       # Instantiates a record from it's JSON representation and registers
