@@ -63,8 +63,8 @@ module Gecko
       # @return <Gecko::Record::Base>
       #
       # @api public
-      def destroy(opts = {})
-        @client.adapter_for(self.class.demodulized_name).destroy(self, opts)
+      def destroy
+        @client.adapter_for(self.class.demodulized_name).destroy(self)
       end
 
       # Return the demodulized class name
