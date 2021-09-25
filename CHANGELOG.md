@@ -1,3 +1,7 @@
+## 0.12.2 (2020-08-12)
+- Change authorize url to commerce.intuit.com
+- Add `payment_due_at` to `Gecko::Record::PurchaseOrder`
+
 ## 0.12.1 (2020-07-20)
 - Add `Gecko::Record::PaymentMethod` model.
 
@@ -22,7 +26,7 @@
 ## 0.9.0 (2019-07-24)
 - Added an optional `ActiveSupport::LogSubscriber` class for easy logging,
   can be enabled via `Gecko.enable_logging`.
-- Added an optional compatibility shim for the Liquid templating language, 
+- Added an optional compatibility shim for the Liquid templating language,
   can be enabled via `Gecko.install_liquid_shim`.
 
 ## 0.8.0 (2019-07-01)
