@@ -8,6 +8,7 @@ module Gecko
       class VariantLocation
         include Virtus.model
         include Gecko::Helpers::SerializationHelper
+        include Gecko::Helpers::AssociationHelper
         attribute :location_id,     Integer
         attribute :available,       BigDecimal
         attribute :bin_location,    String
@@ -21,6 +22,7 @@ module Gecko
       class VariantPrice
         include Virtus.model
         include Gecko::Helpers::SerializationHelper
+        include Gecko::Helpers::AssociationHelper
         attribute :price_list_id,    String
         attribute :value,            BigDecimal
       end
