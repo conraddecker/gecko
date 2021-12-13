@@ -18,6 +18,14 @@ module Gecko
         }
       end
 
+      def source_data_hash
+        attribute_hash = {}
+        attribute_set.each do |attribute|
+          serialize_attribute(attribute_hash, attribute)
+        end
+        attribute_hash
+      end
+
       # Return a serialized hash of the record's attributes
       #
       # @example
